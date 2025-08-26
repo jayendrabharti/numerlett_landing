@@ -8,8 +8,8 @@ import ThemeSwitch from "./ThemeSwitch";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import Reveal from "./animations/Reveal";
-import { NavBarLinks } from "@/utils/navLinks";
 import Logo from "./Logo";
+import { NavBarLinks } from "@/utils/data";
 
 export default function NavBar() {
   const pathname = usePathname();

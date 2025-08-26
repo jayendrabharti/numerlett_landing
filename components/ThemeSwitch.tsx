@@ -20,10 +20,13 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ className }) => {
 
   return (
     <Button
-      variant={"outline"}
+      variant={"ghost"}
       size={"icon"}
       onClick={switchTheme}
-      className={cn("relative rounded-full", className)}
+      className={cn(
+        "relative rounded-full border-border border bg-secondary",
+        className
+      )}
     >
       <Moon
         className={`absolute scale-0 dark:scale-125 transition-all duration-400 rotate-180 dark:rotate-0`}

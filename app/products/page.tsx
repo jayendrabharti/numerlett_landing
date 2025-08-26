@@ -2,14 +2,6 @@
 
 import { motion } from "framer-motion";
 import {
-  BarChart3,
-  ShoppingCart,
-  Users,
-  Zap,
-  Shield,
-  TrendingUp,
-  Package,
-  CreditCard,
   Check,
   Star,
   ArrowRight,
@@ -17,183 +9,13 @@ import {
   Smartphone,
   Cloud,
   Headphones,
+  PhoneCallIcon,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import RevealHero from "@/components/animations/RevealHero";
-import Reveal from "@/components/animations/Reveal";
-
-const features = [
-  {
-    icon: BarChart3,
-    title: "Advanced Analytics",
-    description:
-      "Get deep insights into your business performance with real-time analytics, customizable dashboards, and predictive analytics to forecast trends.",
-    benefits: [
-      "Real-time sales tracking",
-      "Customer behavior analytics",
-      "Predictive inventory forecasting",
-      "Custom KPI dashboards",
-    ],
-  },
-  {
-    icon: ShoppingCart,
-    title: "Inventory Management",
-    description:
-      "Track stock levels, automate reordering, and optimize your inventory across multiple locations with smart alerts and automated workflows.",
-    benefits: [
-      "Multi-location inventory tracking",
-      "Automated reorder points",
-      "Barcode scanning support",
-      "Supplier management",
-    ],
-  },
-  {
-    icon: Users,
-    title: "Customer Management",
-    description:
-      "Build stronger relationships with comprehensive customer profiles, purchase history tracking, and personalized marketing campaigns.",
-    benefits: [
-      "360° customer profiles",
-      "Purchase history tracking",
-      "Loyalty program integration",
-      "Targeted marketing campaigns",
-    ],
-  },
-  {
-    icon: CreditCard,
-    title: "Payment Processing",
-    description:
-      "Accept payments seamlessly with integrated POS systems, multiple payment gateway support, and secure transaction processing.",
-    benefits: [
-      "Multi-gateway support",
-      "Mobile payment processing",
-      "Subscription billing",
-      "Fraud protection",
-    ],
-  },
-  {
-    icon: Package,
-    title: "Supply Chain Management",
-    description:
-      "Streamline your supply chain operations with automated vendor management, procurement workflows, and delivery tracking.",
-    benefits: [
-      "Vendor performance tracking",
-      "Automated purchase orders",
-      "Delivery tracking",
-      "Quality control workflows",
-    ],
-  },
-  {
-    icon: TrendingUp,
-    title: "Sales Optimization",
-    description:
-      "Boost sales with AI-powered recommendations, dynamic pricing strategies, and conversion optimization tools.",
-    benefits: [
-      "AI-powered recommendations",
-      "Dynamic pricing rules",
-      "Sales performance tracking",
-      "Conversion optimization",
-    ],
-  },
-  {
-    icon: Shield,
-    title: "Security & Compliance",
-    description:
-      "Enterprise-grade security with compliance support for retail industry standards, data encryption, and audit trails.",
-    benefits: [
-      "End-to-end encryption",
-      "GDPR compliance",
-      "Audit trail logging",
-      "Role-based access control",
-    ],
-  },
-  {
-    icon: Zap,
-    title: "Process Automation",
-    description:
-      "Automate routine tasks and workflows to focus on growing your business with intelligent automation and workflow management.",
-    benefits: [
-      "Workflow automation",
-      "Task scheduling",
-      "Email notifications",
-      "Integration APIs",
-    ],
-  },
-];
-
-const pricingPlans = [
-  {
-    name: "Starter",
-    price: "$49",
-    period: "/month",
-    description: "Perfect for small businesses just getting started",
-    features: [
-      "Up to 1,000 products",
-      "Basic analytics",
-      "Email support",
-      "Mobile app access",
-      "Basic integrations",
-    ],
-    popular: false,
-  },
-  {
-    name: "Professional",
-    price: "$149",
-    period: "/month",
-    description: "For growing businesses with advanced needs",
-    features: [
-      "Up to 10,000 products",
-      "Advanced analytics",
-      "Priority support",
-      "Multi-location support",
-      "API access",
-      "Custom integrations",
-      "Automated workflows",
-    ],
-    popular: true,
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    period: "",
-    description: "For large businesses with complex requirements",
-    features: [
-      "Unlimited products",
-      "Custom analytics",
-      "24/7 dedicated support",
-      "White-label options",
-      "Advanced security",
-      "Custom development",
-      "SLA guarantee",
-    ],
-    popular: false,
-  },
-];
-
-const testimonials = [
-  {
-    name: "Sarah Johnson",
-    role: "CEO, Fashion Forward",
-    content:
-      "SEED transformed our retail operations. We've seen a 40% increase in efficiency and our inventory management is now seamless.",
-    rating: 5,
-  },
-  {
-    name: "Michael Chen",
-    role: "Operations Director, TechGear",
-    content:
-      "The analytics dashboard gives us insights we never had before. It's like having a crystal ball for our business.",
-    rating: 5,
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Store Manager, HomeDecor Plus",
-    content:
-      "Customer management has never been easier. Our customer satisfaction scores have improved significantly.",
-    rating: 5,
-  },
-];
+import { features, pricingPlans, testimonials } from "@/utils/data";
+import Link from "next/link";
+import ScrollToSection from "@/components/ScrollToSection";
 
 export default function ProductsPage() {
   return (
@@ -216,28 +38,6 @@ export default function ProductsPage() {
                 you run your business. From inventory to customer relationships,
                 SEED handles it all.
               </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
-            >
-              <Button
-                size="lg"
-                className="px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg group"
-              >
-                Start Free Trial
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg"
-              >
-                Schedule Demo
-              </Button>
             </motion.div>
           </div>
         </div>
@@ -446,7 +246,7 @@ export default function ProductsPage() {
                 >
                   {plan.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-primary text-primary-foreground px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-medium">
+                      <span className="flex flex-row w-max bg-primary text-primary-foreground px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-medium">
                         Most Popular
                       </span>
                     </div>
@@ -513,23 +313,13 @@ export default function ProductsPage() {
               Join thousands of retailers who have already revolutionized their
               operations with SEED.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg group"
-              >
-                Start Free Trial
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+
+            <Link href={"/contact"}>
+              <Button size="lg" className="border-border border shadow-md">
+                Contact Us
+                <PhoneCallIcon />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              >
-                Schedule Demo
-              </Button>
-            </div>
+            </Link>
           </motion.div>
         </div>
       </section>

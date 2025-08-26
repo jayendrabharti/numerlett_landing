@@ -16,9 +16,11 @@ import {
   Zap,
   Code,
   Brain,
+  PhoneCallIcon,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const technicalServices = [
   {
@@ -238,27 +240,12 @@ export default function ServicesPage() {
               </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
-            >
-              <Button
-                size="lg"
-                className="px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg group"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+            <Link href={"/contact"}>
+              <Button size="lg" className="rounded-full text-lg">
+                Contact Us
+                <PhoneCallIcon />
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg"
-              >
-                View Portfolio
-              </Button>
-            </motion.div>
+            </Link>
           </div>
         </div>
       </section>
@@ -434,23 +421,12 @@ export default function ServicesPage() {
               Let's discuss how our technical expertise can help transform your
               business and achieve your digital goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg group"
-              >
-                Get Free Consultation
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+            <Link href={"/contact"}>
+              <Button size="lg" className="border-border border shadow-md">
+                Contact Us
+                <PhoneCallIcon />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              >
-                View Our Work
-              </Button>
-            </div>
+            </Link>
           </motion.div>
         </div>
       </section>

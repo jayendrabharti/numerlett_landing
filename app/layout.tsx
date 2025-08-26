@@ -8,11 +8,29 @@ import Main from "@/components/Main";
 import Footer from "@/components/Footer";
 import ThemeProvider from "@/providers/ThemeProvider";
 
-export const metadata: Metadata = {
-  title: "Numerlett - Revolutionize Your Retail Business",
-  description:
-    "SEED is the comprehensive retail management system that streamlines operations, boosts efficiency, and drives growth for modern businesses.",
-};
+export function generateMetadata(): Metadata {
+  return {
+    title: `Numerlett`,
+    description:
+      "SEED is the comprehensive retail management system that streamlines operations, boosts efficiency, and drives growth for modern businesses.",
+    openGraph: {
+      title: `Numerlett`,
+      description:
+        "SEED is the comprehensive retail management system that streamlines operations, boosts efficiency, and drives growth for modern businesses.",
+      url: "https://www.numerlett.com",
+      siteName: `Numerlett`,
+      images: [
+        {
+          url: "/images/numerlett-logo-small.png",
+          width: 358,
+          height: 358,
+        },
+      ],
+      locale: "en_IN",
+      type: "website",
+    },
+  };
+}
 
 export default function RootLayout({
   children,
