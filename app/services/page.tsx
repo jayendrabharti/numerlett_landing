@@ -422,7 +422,7 @@ export default function ServicesPage() {
               business and achieve your digital goals.
             </p>
             <Link href={"/contact"}>
-              <Button size="lg" className="border-border border shadow-md">
+              <Button size="lg" variant={"secondary"}>
                 Contact Us
                 <PhoneCallIcon />
               </Button>

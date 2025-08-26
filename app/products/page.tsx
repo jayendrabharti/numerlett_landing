@@ -315,7 +315,7 @@ export default function ProductsPage() {
             </p>
 
             <Link href={"/contact"}>
-              <Button size="lg" className="border-border border shadow-md">
+              <Button size="lg" variant={"secondary"}>
                 Contact Us
                 <PhoneCallIcon />
               </Button>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, PhoneCallIcon, Play } from "lucide-react";
+import { ArrowRight, PhoneCallIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import RevealHero from "../animations/RevealHero";
 import ScrollToSection from "../ScrollToSection";
