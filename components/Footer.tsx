@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Logo from "./Logo";
 import { footerLinks, socialLinks } from "@/utils/data";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -83,7 +84,13 @@ export default function Footer() {
           </p>
           <p className="text-muted-foreground text-sm mt-2 md:mt-0 gap-2 flex flex-row items-center">
             Made with ❤️ for retail businesses in INDIA{" "}
-            <img src={`/indian-flag.svg`} className="size-6" />
+            <Image
+              src={`/indian-flag.svg`}
+              alt="Indian Flag"
+              className="size-6"
+              width={50}
+              height={50}
+            />
           </p>
         </motion.div>
       </div>
