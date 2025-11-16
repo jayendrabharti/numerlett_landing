@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../prisma/generated"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String    @id @default(cuid())
+  email       String    @unique
+  phone       String?   @unique
+  name        String?
+  image      String?
+  isAdmin     Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("users")
+}
+
+// Contact form submissions
+model ContactForm {
+  id        String   @id @default(cuid())
+  email     String
+  name      String
+  mobile    String
+  message   String 
+  status    ContactFormStatus @default(PENDING)
+  adminNotes String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+  @@map("contact_forms")
+}
+
+enum ContactFormStatus {
+  PENDING
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+// Instagram posts
+model InstagramPost {
+  id        String   @id @default(cuid())
+  postId    String   @unique // Instagram post ID (e.g., "DQEIFabANQl")
+  caption   String?
+  order     Int      @default(0)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([isActive, order])
+  @@map("instagram_posts")
+}

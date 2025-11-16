@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { InfoIcon, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeSwitch from "./ThemeSwitch";
@@ -9,7 +9,15 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import Reveal from "./animations/Reveal";
 import Logo from "./Logo";
-import { NavBarLinks } from "@/utils/data";
+import { FaBlog, FaCube, FaHome } from "react-icons/fa";
+
+export const NavBarLinks = [
+  { name: "Home", href: "/", icon: FaHome },
+  { name: "Products", href: "/products", icon: FaCube },
+  { name: "Services", href: "/services", icon: FaCube },
+  { name: "About Us", href: "/about", icon: InfoIcon },
+  { name: "Blogs", href: "/blogs", icon: FaBlog },
+];
 
 export default function NavBar() {
   const pathname = usePathname();

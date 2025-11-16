@@ -15,8 +15,6 @@ import {
   CreditCard,
 } from "lucide-react";
 
-import { FaHome, FaCube, FaBlog, FaCogs } from "react-icons/fa";
-
 export const appName = "Numerlett";
 
 export const contactInfo = {
@@ -25,13 +23,6 @@ export const contactInfo = {
   linkedin: "https://www.linkedin.com/company/numerlett",
   instagram: "https://www.instagram.com/numerlett.tech/",
 };
-
-export const NavBarLinks = [
-  { name: "Home", href: "/", icon: FaHome },
-  { name: "Products", href: "/products", icon: FaCube },
-  { name: "Services", href: "/services", icon: FaCogs },
-  { name: "Blogs", href: "/blogs", icon: FaBlog },
-];
 
 export const footerLinks = {
   product: [
