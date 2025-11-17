@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "prisma generate",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "postinstall": "prisma generate --no-engine"
+    "lint": "eslint"
   },
   "dependencies": {
     "@prisma/client": "^6.19.0",

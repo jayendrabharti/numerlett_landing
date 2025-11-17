@@ -16,7 +16,7 @@ import {
   updateContactFormStatus,
   deleteContactForm,
 } from "@/actions/contactForm";
-import { ContactFormStatus } from "@/prisma/generated/enums";
+import { ContactFormStatus } from "@prisma/client";
 
 interface ContactForm {
   id: string;

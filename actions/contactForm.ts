@@ -1,8 +1,8 @@
 "use server";
 
 import prisma from "@/prisma/client";
+import { ContactFormStatus } from "@prisma/client";
 import { revalidatePath } from "next/cache";
-import { ContactFormStatus } from "@/prisma/generated/enums";
 
 export async function getContactForms(status?: ContactFormStatus) {
   try {
