@@ -37,10 +37,10 @@ export default function NavBar() {
     <nav
       className={cn(
         `w-full space-x-2`,
-        `border-border border-b shadow-md`,
         `sticky top-0 left-0 z-50`,
         `flex flex-row items-center py-4`,
-        `bg-background transition-all duration-200`
+        `transition-all duration-200`,
+        "backdrop-blur"
       )}
     >
       <Reveal
@@ -54,7 +54,6 @@ export default function NavBar() {
 
         <div
           className={cn(
-            // `ml-auto md:w-max`,
             `flex flex-col md:flex-row`,
             `items-start md:items-center`,
             `justify-center`,

@@ -9,16 +9,14 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <Main
+      className={cn(
+        "flex w-full flex-col items-center overflow-y-auto overflow-x-hidden flex-1"
+      )}
+    >
       <NavBar />
-      <Main
-        className={cn(
-          "flex w-full flex-col items-center overflow-y-auto overflow-x-hidden flex-1"
-        )}
-      >
-        {children}
-        <Footer />
-      </Main>
-    </>
+      {children}
+      <Footer />
+    </Main>
   );
 }
