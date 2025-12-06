@@ -20,8 +20,8 @@ export default function HeroSection() {
       </Link>
 
       <RevealHero className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight mx-auto">
-        Revolutionize Your
-        <span className="text-primary block">Retail Business</span>
+        <span className="dark:text-primary block">Revolutionize Your</span>
+        <span className="dark:text-primary block">Retail Business</span>
       </RevealHero>
 
       <motion.p
