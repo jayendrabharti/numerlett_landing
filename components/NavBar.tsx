@@ -8,8 +8,8 @@ import ThemeSwitch from "./ThemeSwitch";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import Reveal from "./animations/Reveal";
-import Logo from "./Logo";
 import { FaBlog, FaCube, FaHome } from "react-icons/fa";
+import AnimatedLogo from "./AnimatedLogo";
 
 export const NavBarLinks = [
   { name: "Home", href: "/", icon: FaHome },
@@ -43,14 +43,14 @@ export default function NavBar() {
         "backdrop-blur"
       )}
     >
-      <Reveal
+      <div
         className={cn(
           "flex items-center justify-between",
           "mx-auto px-5 md:px-10",
           "w-full space-x-3"
         )}
       >
-        <Logo />
+        <AnimatedLogo />
 
         <div
           className={cn(
@@ -123,7 +123,7 @@ export default function NavBar() {
             )}
           />
         </Button>
-      </Reveal>
+      </div>
     </nav>
   );
 }
