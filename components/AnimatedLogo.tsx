@@ -21,7 +21,6 @@ export default function AnimatedLogo({
         height: "100dvh",
         top: 0,
         left: 0,
-        backdropFilter: "blur(5px)",
         backgroundColor:
           "color-mix(in oklab, var(--background) 100%, transparent)",
       }}
@@ -34,11 +33,13 @@ export default function AnimatedLogo({
         height: "max-content",
         top: "auto",
         left: "auto",
-        backdropFilter: "blur(5px)",
         backgroundColor:
-          "color-mix(in oklab, var(--background) 80%, transparent)",
+          "color-mix(in oklab, var(--background) 0%, transparent)",
       }}
-      transition={{ duration: 1, delay: 0.5 }}
+      transition={{
+        backgroundColor: { duration: 0.5, delay: 0.5 },
+        default: { duration: 1, delay: 1 },
+      }}
     >
       <Link
         className={cn("flex items-center max-h-full", className)}
