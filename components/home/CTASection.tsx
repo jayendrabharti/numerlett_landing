@@ -7,15 +7,15 @@ import Link from "next/link";
 import ScrollToSection from "../ScrollToSection";
 
 const benefits = [
-  "Free 30-day trial",
-  "No setup fees",
-  "24/7 customer support",
-  "Easy migration from existing systems",
+  "Get notified when SEED launches",
+  "Help shape the product roadmap",
+  "Early access with special pricing",
+  "Built for Indian retail teams",
 ];
 
 export default function CTASection() {
   return (
-    <section className="py-24 bg-secondary/5">
+    <section className="py-20 md:py-28 bg-muted/30">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -24,12 +24,10 @@ export default function CTASection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Ready to Transform Your Retail Business?
+            Join the early access waitlist
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join hundreds of retailers who have already revolutionized their
-            operations with SEED. Start your journey today and experience the
-            difference.
+            We&apos;re building SEED with real retailers. Share how you run your stores, and we&apos;ll keep you updated on progress — plus you&apos;ll get early access when we launch.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -55,19 +53,19 @@ export default function CTASection() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <Link href={"/contact"}>
-              <Button size="lg" className="rounded-full text-lg">
-                Contact Us
-                <PhoneCallIcon />
+              <Button size="lg" className="rounded-full text-lg px-8">
+                Join waitlist
+                <PhoneCallIcon className="ml-2" />
               </Button>
             </Link>
             <ScrollToSection targetId="about">
               <Button
                 variant={"outline"}
                 size="lg"
-                className="rounded-full text-lg"
+                className="rounded-full text-lg px-8"
               >
-                Learn More
-                <ArrowRight />
+                About Numerlett
+                <ArrowRight className="ml-2" />
               </Button>
             </ScrollToSection>
           </motion.div>

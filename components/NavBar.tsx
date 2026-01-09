@@ -13,9 +13,8 @@ import AnimatedLogo from "./AnimatedLogo";
 
 export const NavBarLinks = [
   { name: "Home", href: "/", icon: FaHome },
-  { name: "Products", href: "/products", icon: FaCube },
   { name: "Services", href: "/services", icon: FaCube },
-  { name: "About Us", href: "/about", icon: InfoIcon },
+  { name: "About", href: "/#about", icon: InfoIcon },
   { name: "Blogs", href: "/blogs", icon: FaBlog },
 ];
 

@@ -2,8 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import ScrollToTop from "./ScrollToTop";
-
 import { ReactNode } from "react";
 
 export default function Main({
@@ -25,7 +23,6 @@ export default function Main({
   return (
     <main ref={mainRef} {...props}>
       {children}
-      <ScrollToTop mainRef={mainRef} />
     </main>
   );
 }

@@ -26,9 +26,9 @@ export const contactInfo = {
 
 export const footerLinks = {
   product: [
-    { name: "Products", href: "/products" },
-    { name: "Features", href: "/#products" },
-    { name: "Pricing", href: "#pricing" },
+    { name: "Products", href: "/#features" },
+    { name: "Features", href: "/#features" },
+    { name: "Pricing", href: "/#pricing" },
     { name: "API Documentation", href: "#docs" },
     { name: "Integrations", href: "#integrations" },
   ],
@@ -162,32 +162,31 @@ export const features = [
 
 export const pricingPlans = [
   {
-    name: "Basic",
-    price: "₹19",
-    period: "/month",
-    description: "Perfect for small businesses just getting started",
+    name: "Starter",
+    price: "TBD",
+    period: "",
+    description: "For small shops and single-location stores",
     features: [
-      "Up to 1,000 products",
-      "Basic analytics",
-      "Email support",
+      "Core inventory management",
+      "Basic billing and invoicing",
+      "Sales reports",
       "Mobile app access",
-      "Basic integrations",
+      "Email support",
     ],
     popular: false,
   },
   {
-    name: "Pro",
-    price: "₹59",
-    period: "/month",
-    description: "For growing businesses with advanced needs",
+    name: "Business",
+    price: "TBD",
+    period: "",
+    description: "For stores with multiple locations or channels",
     features: [
-      "Up to 10,000 products",
-      "Advanced analytics",
-      "Priority support",
+      "Everything in Starter",
       "Multi-location support",
+      "Advanced reporting",
+      "Supplier management",
+      "Priority support",
       "API access",
-      "Custom integrations",
-      "Automated workflows",
     ],
     popular: true,
   },
@@ -195,40 +194,15 @@ export const pricingPlans = [
     name: "Enterprise",
     price: "Custom",
     period: "",
-    description: "For large businesses with complex requirements",
+    description: "For larger operations with specific needs",
     features: [
-      "Unlimited products",
-      "Custom analytics",
-      "24/7 dedicated support",
-      "White-label options",
-      "Advanced security",
-      "Custom development",
+      "Everything in Business",
+      "Custom integrations",
+      "Dedicated support",
+      "Custom features",
+      "Training and onboarding",
       "SLA guarantee",
     ],
     popular: false,
-  },
-];
-
-export const testimonials = [
-  {
-    name: "Sarah Johnson",
-    role: "CEO, Fashion Forward",
-    content:
-      "SEED transformed our retail operations. We've seen a 40% increase in efficiency and our inventory management is now seamless.",
-    rating: 5,
-  },
-  {
-    name: "Michael Chen",
-    role: "Operations Director, TechGear",
-    content:
-      "The analytics dashboard gives us insights we never had before. It's like having a crystal ball for our business.",
-    rating: 5,
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Store Manager, HomeDecor Plus",
-    content:
-      "Customer management has never been easier. Our customer satisfaction scores have improved significantly.",
-    rating: 5,
   },
 ];

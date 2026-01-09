@@ -7,7 +7,7 @@ import RevealHero from "../animations/RevealHero";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -20,10 +20,10 @@ export default function AboutSection() {
             About Numerlett
           </RevealHero>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We're a forward-thinking software startup dedicated to transforming
-            the retail industry through innovative technology solutions. Our
-            mission is to empower businesses with the tools they need to thrive
-            in today's competitive marketplace.
+            We&apos;re a small team building SEED, a retail operations platform
+            designed for Indian retailers. We believe retail software should be
+            simple, reliable, and actually useful — not overwhelming dashboards
+            and features you&apos;ll never use.
           </p>
         </motion.div>
 
@@ -34,22 +34,18 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <Card className="h-full text-center bg-background border-border">
+            <Card className="h-full text-center bg-background border-border hover:border-primary/20 transition-colors">
               <CardContent className="p-8">
-                <motion.div
-                  className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary mb-6">
                   <Target size={32} />
-                </motion.div>
+                </div>
                 <h3 className="text-xl font-semibold text-foreground mb-4">
                   Our Mission
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  To democratize advanced retail technology, making powerful
-                  business tools accessible to retailers of all sizes and
-                  helping them compete in the digital age.
+                  Build retail software that actually works for small and medium
+                  retailers in India. No enterprise complexity, no unnecessary
+                  features — just tools that make daily operations easier.
                 </p>
               </CardContent>
             </Card>
@@ -61,22 +57,18 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="h-full text-center bg-background border-border">
+            <Card className="h-full text-center bg-background border-border hover:border-primary/20 transition-colors">
               <CardContent className="p-8">
-                <motion.div
-                  className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary mb-6">
                   <Eye size={32} />
-                </motion.div>
+                </div>
                 <h3 className="text-xl font-semibold text-foreground mb-4">
                   Our Vision
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  To become the leading platform that connects retailers with
-                  cutting-edge technology, fostering innovation and growth
-                  across the global retail ecosystem.
+                  Create software that retailers actually want to use.
+                  We&apos;re starting with SEED, and we&apos;ll keep building
+                  based on what real retailers tell us they need.
                 </p>
               </CardContent>
             </Card>
@@ -88,22 +80,18 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <Card className="h-full text-center bg-background border-border">
+            <Card className="h-full text-center bg-background border-border hover:border-primary/20 transition-colors">
               <CardContent className="p-8">
-                <motion.div
-                  className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary mb-6">
                   <Award size={32} />
-                </motion.div>
+                </div>
                 <h3 className="text-xl font-semibold text-foreground mb-4">
                   Our Values
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Innovation, reliability, and customer success drive everything
-                  we do. We believe in building lasting partnerships and
-                  delivering exceptional value.
+                  Simplicity over features. Reliability over flashy tech. Real
+                  feedback over assumptions. We&apos;re building this with
+                  retailers, not for them.
                 </p>
               </CardContent>
             </Card>

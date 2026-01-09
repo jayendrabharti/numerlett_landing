@@ -1,98 +1,82 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Logo from "./Logo";
-import { footerLinks, socialLinks } from "@/utils/data";
+import { contactInfo } from "@/utils/data";
+import { LinkedinIcon, InstagramIcon, MailIcon, PhoneCallIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
+const footerLinks = [
+  { name: "Features", href: "/#features" },
+  { name: "Pricing", href: "/#pricing" },
+  { name: "About", href: "/#about" },
+  { name: "Contact", href: "/contact" },
+];
+
+const socialLinks = [
+  { name: "LinkedIn", icon: LinkedinIcon, href: contactInfo.linkedin },
+  { name: "Instagram", icon: InstagramIcon, href: contactInfo.instagram },
+  { name: "Email", icon: MailIcon, href: `mailto:${contactInfo.mail}` },
+  { name: "Phone", icon: PhoneCallIcon, href: `tel:${contactInfo.phone}` },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-sidebar border-t border-sidebar-border w-full">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+    <footer className="border-t border-border w-full bg-background">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           {/* Brand Section */}
-          <div className="lg:col-span-2">
-            <Logo className="mb-4" />
-            <motion.p
-              className="text-muted-foreground mb-6 max-w-sm"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              Revolutionizing retail management with innovative software
-              solutions. Empowering businesses to thrive in the digital age.
-            </motion.p>
-            <motion.div
-              className="flex space-x-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
+          <div className="flex-1">
+            <Logo className="mb-3" />
+            <p className="text-sm text-muted-foreground mb-4 max-w-md">
+              Building SEED — retail operations software for Indian retailers.
+            </p>
+            <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   className="text-muted-foreground hover:text-primary transition-colors"
                   aria-label={social.name}
+                  target={social.href.startsWith("http") ? "_blank" : undefined}
+                  rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
-                  <social.icon size={20} />
+                  <social.icon size={18} />
                 </a>
               ))}
-            </motion.div>
+            </div>
           </div>
 
-          {/* Links Sections */}
-          {Object.entries(footerLinks).map(([category, links], index) => (
-            <motion.div
-              key={category}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-sm font-semibold text-sidebar-foreground uppercase tracking-wider mb-4">
-                {category.replace(/([A-Z])/g, " $1").trim()}
-              </h3>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+          {/* Links */}
+          <nav className="flex flex-wrap gap-6">
+            {footerLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
         </div>
 
         {/* Bottom Section */}
-        <motion.div
-          className="border-t border-sidebar-border mt-12 pt-8 sm:px-20 flex flex-col md:flex-row justify-between items-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-muted-foreground text-sm">
-            © 2025 Numerlett. All rights reserved.
+        <div className="border-t border-border mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} Numerlett. All rights reserved.
           </p>
-          <p className="text-muted-foreground text-sm mt-2 md:mt-0 gap-2 flex flex-row items-center">
-            Made with ❤️ for retail businesses in INDIA{" "}
+          <p className="text-xs text-muted-foreground flex items-center gap-2">
+            Made for retail businesses in India
             <Image
-              src={`/indian-flag.svg`}
+              src="/indian-flag.svg"
               alt="Indian Flag"
-              className="size-6"
-              width={50}
-              height={50}
+              className="size-4"
+              width={16}
+              height={16}
             />
           </p>
-        </motion.div>
+        </div>
       </div>
     </footer>
   );

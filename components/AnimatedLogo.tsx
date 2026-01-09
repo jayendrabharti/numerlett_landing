@@ -3,27 +3,35 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 export default function AnimatedLogo({
   className = "",
 }: {
   className?: string;
 }) {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
   return (
     <motion.div
       className="z-50"
-      initial={{
-        position: "fixed",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100dvw",
-        height: "100dvh",
-        top: 0,
-        left: 0,
-        backgroundColor:
-          "color-mix(in oklab, var(--background) 100%, transparent)",
-      }}
+      initial={
+        isHomePage
+          ? {
+              position: "fixed",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100dvw",
+              height: "100dvh",
+              top: 0,
+              left: 0,
+              backgroundColor:
+                "color-mix(in oklab, var(--background) 100%, transparent)",
+            }
+          : false
+      }
       animate={{
         position: "fixed",
         display: "flex",
