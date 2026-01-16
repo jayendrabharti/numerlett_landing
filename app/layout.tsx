@@ -37,15 +37,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="h-full overflow-hidden">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className="h-full overflow-hidden dark"
+    >
       <body className={cn("h-full w-full flex flex-col overflow-hidden")}>
         <ThemeProvider>
-          <NextAuthSessionProviders>
-            <DataProvider>
-              {children}
-              <Toaster richColors />
-            </DataProvider>
-          </NextAuthSessionProviders>
+        <NextAuthSessionProviders>
+          <DataProvider>
+            {children}
+            <Toaster richColors />
+          </DataProvider>
+        </NextAuthSessionProviders>
         </ThemeProvider>
       </body>
     </html>

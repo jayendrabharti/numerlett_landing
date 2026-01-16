@@ -5,8 +5,10 @@ import { signIn } from "next-auth/react";
 
 export default function GoogleButton({
   className = "",
+  text = "Continue with Google",
 }: {
   className?: string;
+  text?: string;
 }) {
   const handleGoogleLogin = async () => {
     await signIn("google");
@@ -20,7 +22,7 @@ export default function GoogleButton({
       onClick={handleGoogleLogin}
     >
       <FcGoogle />
-      Continue with Google
+      {text}
     </Button>
   );
 }

@@ -15,7 +15,13 @@ import { Button } from "@/components/ui/button";
 import { useSession } from "next-auth/react";
 import GoogleButton from "./GoogleButton";
 
-export default function UserButton({ className = "" }: { className?: string }) {
+export default function UserButton({
+  className = "",
+  unauthenticatedComponent,
+}: {
+  className?: string;
+  unauthenticatedComponent?: React.ReactNode;
+}) {
   const { status, data: session } = useSession();
 
   const user = session?.user as User;
@@ -23,7 +29,8 @@ export default function UserButton({ className = "" }: { className?: string }) {
   if (status == "loading")
     return <Loader2Icon className={cn("animate-spin", className)} />;
 
-  if (status == "unauthenticated") return <GoogleButton />;
+  if (status == "unauthenticated")
+    return unauthenticatedComponent ?? <GoogleButton />;
 
   const initials = user?.name
     ? user.name.slice(0, 2).toUpperCase()
@@ -65,7 +72,7 @@ export default function UserButton({ className = "" }: { className?: string }) {
             <DropdownMenuSeparator />
 
             <div className="flex flex-col gap-2 p-1">
-              {/* <Link href="/profile" prefetch={true}>
+              <Link href="/profile" prefetch={true}>
                 <Button
                   variant={"outline"}
                   className="mx-auto flex w-full items-center justify-start"
@@ -85,7 +92,7 @@ export default function UserButton({ className = "" }: { className?: string }) {
                     Admin Dashboard
                   </Button>
                 </Link>
-              )} */}
+              )}
 
               <SignOutButton className="mx-auto flex w-full items-center justify-start" />
             </div>

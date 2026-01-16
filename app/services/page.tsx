@@ -8,6 +8,7 @@ import Logo from "@/components/Logo";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import ParallaxBackground from "@/components/services/ParallaxBackground";
 import useIsMobile from "@/hooks/useIsMobile";
+import { ArrowRightIcon } from "lucide-react";
 
 const TABS: {
   id: number;
@@ -76,7 +77,7 @@ export default function GoToPage() {
           <div
             className={cn(
               TabClassName(activeId === tab.id),
-              "relative overflow-hidden p-0! m-0! mb-0"
+              "relative overflow-hidden p-0! m-0! mb-0 gap-2"
             )}
             key={tab.id}
             onMouseEnter={() => !isMobile && setActiveId(tab.id)}
@@ -136,12 +137,8 @@ export default function GoToPage() {
                   }}
                 >
                   <Link href={tab.href} className="p-0! inline-block">
-                    <Button
-                      variant={"secondary"}
-                      size={"lg"}
-                      className="bg-[#0003] text-sm sm:text-base md:text-lg lg:text-xl text-inherit hover:bg-[#0005] transition-colors p-0! px-3! sm:px-4! py-1.5! sm:py-2! m-0! drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]"
-                    >
-                      ENTER
+                    <Button variant={"outline"} size={"lg"}>
+                      Explore <ArrowRightIcon />
                     </Button>
                   </Link>
                   <p className="text-white max-w-[90%] sm:max-w-prose text-center text-xs sm:text-sm px-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] m-0! p-0! mb-0!">

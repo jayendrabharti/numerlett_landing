@@ -10,12 +10,14 @@ import { Button } from "./ui/button";
 import Reveal from "./animations/Reveal";
 import { FaBlog, FaCube, FaHome } from "react-icons/fa";
 import AnimatedLogo from "./AnimatedLogo";
+import UserButton from "./auth/UserButton";
+import GoogleButton from "./auth/GoogleButton";
 
 export const NavBarLinks = [
   { name: "Home", href: "/", icon: FaHome },
   { name: "Services", href: "/services", icon: FaCube },
   { name: "About", href: "/#about", icon: InfoIcon },
-  { name: "Blogs", href: "/blogs", icon: FaBlog },
+  // { name: "Blogs", href: "/blogs", icon: FaBlog },
 ];
 
 export default function NavBar() {
@@ -53,6 +55,7 @@ export default function NavBar() {
 
         <div
           className={cn(
+            "backdrop-blur",
             `flex flex-col md:flex-row`,
             `items-start md:items-center`,
             `justify-center`,
@@ -65,7 +68,6 @@ export default function NavBar() {
             expanded
               ? "translate-y-0 scale-y-100"
               : "-translate-y-1/2 scale-y-0 md:translate-y-0 md:scale-y-100",
-            expanded && "bg-background",
             `border-border border-b-2 md:border-0`
           )}
         >
@@ -97,7 +99,12 @@ export default function NavBar() {
           })}
         </div>
 
-        <ThemeSwitch className="md:ml-0 ml-auto" />
+        <UserButton
+          className="ml-auto"
+          unauthenticatedComponent={
+            <GoogleButton text="Login" className="ml-auto" />
+          }
+        />
 
         <Button
           variant={"ghost"}
