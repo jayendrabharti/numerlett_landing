@@ -57,7 +57,7 @@ const supportOptions = [
   {
     icon: Headphones,
     title: "Technical Support",
-    description: "Need help with SEED or technical issues",
+    description: "Need help with our products or technical issues",
     contact: "numerlett@gmail.com",
   },
   {
@@ -78,7 +78,7 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="flex flex-col pt-20 pb-8">
+      <section className="flex flex-col pt-20 pb-8 w-full">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col items-center text-center">
             <motion.div
@@ -91,8 +91,9 @@ export default function ContactPage() {
                 Get in <span className="text-primary">Touch</span>
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                Have questions about SEED or need support? We're here to help
-                you transform your retail business.
+                Have questions about our services or need support? We're here to
+                help you transform your business with our technical and
+                marketing solutions.
               </p>
             </motion.div>
           </div>
@@ -100,7 +101,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="flex flex-col py-12 bg-muted/30">
+      <section className="flex flex-col py-12 bg-muted/30 w-full">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col items-center text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
@@ -155,7 +156,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form and Support Options */}
-      <section className="flex flex-col py-12">
+      <section className="flex flex-col py-12 w-full">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
@@ -206,7 +207,7 @@ export default function ContactPage() {
                       key={option.title}
                       className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-muted/50"
                     >
-                      <div className="p-2 rounded-lg bg-primary/10 text-primary flex-shrink-0">
+                      <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
                         <option.icon size={16} className="sm:w-5 sm:h-5" />
                       </div>
                       <div className="flex-1 min-w-0">
@@ -288,38 +289,38 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="flex flex-col py-12 bg-muted/30">
+      <section className="flex flex-col py-12 bg-muted/30 w-full">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col items-center text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
               Frequently Asked Questions
             </h2>
             <p className="text-base text-muted-foreground">
-              Quick answers to common questions about SEED and our services
+              Quick answers to common questions about our services
             </p>
           </div>
 
           <div className="flex flex-col space-y-4 sm:space-y-6">
             {[
               {
-                question: "How quickly can I get started with SEED?",
+                question: "What services does Numerlett offer?",
                 answer:
-                  "You can start using SEED immediately with our free trial. Setup typically takes less than 30 minutes, and our team provides onboarding support to get you up and running quickly.",
+                  "We provide comprehensive technical services including software development, AI automations, cloud solutions, and UI/UX design, alongside marketing services like SEO, social media management, content creation, and branding.",
               },
               {
                 question: "Do you offer technical support?",
                 answer:
-                  "Yes! We provide comprehensive technical support via email and phone during business hours. Enterprise customers receive priority support with guaranteed response times.",
+                  "Yes! We provide comprehensive technical support via email and phone during business hours. All our clients receive dedicated support throughout their project lifecycle and beyond.",
               },
               {
-                question: "Can SEED integrate with my existing systems?",
+                question: "How do I get started with a project?",
                 answer:
-                  "SEED offers robust API integrations and can connect with most popular retail systems, POS solutions, and accounting software. Contact us to discuss your specific integration needs.",
+                  "Simply reach out through our contact form or book a consultation. We'll schedule a discovery call to understand your requirements, provide a tailored proposal, and outline the next steps for your project.",
               },
               {
-                question: "What industries do you serve?",
+                question: "What industries do you work with?",
                 answer:
-                  "SEED is designed for all types of retail businesses, from small boutiques to large chains. We serve fashion, electronics, home goods, grocery, and many other retail sectors.",
+                  "We work with businesses across various industries including retail, healthcare, finance, education, e-commerce, and more. Our solutions are tailored to meet the unique needs of each sector.",
               },
             ].map((faq, index) => (
               <motion.div

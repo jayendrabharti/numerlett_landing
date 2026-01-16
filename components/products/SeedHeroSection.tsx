@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, PhoneCallIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import RevealHero from "../animations/RevealHero";
+import ScrollToSection from "../ScrollToSection";
 import Link from "next/link";
 
-export default function HeroSection() {
+export default function SeedHeroSection() {
   return (
     <section className="flex flex-col items-center justify-center min-h-[calc(100dvh-4rem)] text-center text-balance px-4">
       <motion.div
@@ -19,12 +20,13 @@ export default function HeroSection() {
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
         </span>
-        Transforming Ideas into Digital Reality
+        Coming soon · SEED by Numerlett
       </motion.div>
 
       <RevealHero className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight mx-auto max-w-5xl">
-        <span className="dark:text-primary block">Build, Grow & Scale</span>
-        <span className="dark:text-primary block">Your Digital Presence</span>
+        <span className="dark:text-primary block">Retail Software</span>
+        <span className="dark:text-primary block">That Feels Calm,</span>
+        <span className="dark:text-primary block">Not Chaotic</span>
       </RevealHero>
 
       <motion.p
@@ -33,9 +35,9 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
-        Numerlett empowers businesses with comprehensive software development,
-        digital marketing, and innovative product solutions. From AI automations
-        to brand strategy, we deliver excellence across the digital landscape.
+        SEED is being built to help retail teams keep inventory, billing, and
+        reporting in one place. When it launches, the numbers you see at closing
+        time will match what&apos;s on the shelves.
       </motion.p>
 
       <motion.div
@@ -44,22 +46,22 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
       >
-        <Link href={"/book-appointment"}>
+        <Link href={"/contact"}>
           <Button size="lg" className="rounded-full text-lg px-8">
-            Book a Consultation
-            <Calendar className="ml-2 w-5 h-5" />
+            Get early access
+            <PhoneCallIcon className="ml-2" />
           </Button>
         </Link>
-        <Link href={"/services"}>
+        <ScrollToSection targetId="features">
           <Button
             variant={"outline"}
             size="lg"
             className="rounded-full text-lg px-8"
           >
-            Explore Services
-            <ArrowRight className="ml-2 w-5 h-5" />
+            See what&apos;s planned
+            <ArrowRight className="ml-2" />
           </Button>
-        </Link>
+        </ScrollToSection>
       </motion.div>
     </section>
   );

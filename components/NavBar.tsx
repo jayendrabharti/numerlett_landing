@@ -1,23 +1,21 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { InfoIcon, Menu, X } from "lucide-react";
+import { CalendarDays, InfoIcon, Menu, Package2, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ThemeSwitch from "./ThemeSwitch";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import Reveal from "./animations/Reveal";
-import { FaBlog, FaCube, FaHome } from "react-icons/fa";
+import { FaCube, FaHome } from "react-icons/fa";
 import AnimatedLogo from "./AnimatedLogo";
 import UserButton from "./auth/UserButton";
 import GoogleButton from "./auth/GoogleButton";
 
 export const NavBarLinks = [
   { name: "Home", href: "/", icon: FaHome },
+  { name: "Products", href: "/products", icon: Package2 },
   { name: "Services", href: "/services", icon: FaCube },
-  { name: "About", href: "/#about", icon: InfoIcon },
-  // { name: "Blogs", href: "/blogs", icon: FaBlog },
+  { name: "Book Appointment", href: "/book-appointment", icon: CalendarDays },
 ];
 
 export default function NavBar() {

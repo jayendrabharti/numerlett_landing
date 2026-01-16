@@ -7,8 +7,8 @@ import RevealHero from "../animations/RevealHero";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 md:py-28 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -20,10 +20,10 @@ export default function AboutSection() {
             About Numerlett
           </RevealHero>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We&apos;re a small team building SEED, a retail operations platform
-            designed for Indian retailers. We believe retail software should be
-            simple, reliable, and actually useful — not overwhelming dashboards
-            and features you&apos;ll never use.
+            We&apos;re a dynamic team delivering comprehensive technical and
+            marketing solutions to businesses worldwide. From custom software
+            development to strategic digital marketing, we combine innovation
+            with expertise to help our clients succeed.
           </p>
         </motion.div>
 
@@ -43,9 +43,9 @@ export default function AboutSection() {
                   Our Mission
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Build retail software that actually works for small and medium
-                  retailers in India. No enterprise complexity, no unnecessary
-                  features — just tools that make daily operations easier.
+                  Empower businesses with cutting-edge technology and strategic
+                  marketing solutions that drive growth, enhance efficiency, and
+                  create lasting impact in the digital world.
                 </p>
               </CardContent>
             </Card>
@@ -66,9 +66,9 @@ export default function AboutSection() {
                   Our Vision
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Create software that retailers actually want to use.
-                  We&apos;re starting with SEED, and we&apos;ll keep building
-                  based on what real retailers tell us they need.
+                  Be the trusted partner for businesses seeking innovative
+                  technical and marketing solutions. We envision a future where
+                  every business has access to world-class digital capabilities.
                 </p>
               </CardContent>
             </Card>
@@ -89,9 +89,9 @@ export default function AboutSection() {
                   Our Values
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Simplicity over features. Reliability over flashy tech. Real
-                  feedback over assumptions. We&apos;re building this with
-                  retailers, not for them.
+                  Excellence in execution. Innovation in approach. Transparency
+                  in communication. Client success is our success, and we commit
+                  to delivering solutions that exceed expectations.
                 </p>
               </CardContent>
             </Card>

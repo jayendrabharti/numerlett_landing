@@ -50,57 +50,27 @@ const whyChooseUs = [
     icon: Brain,
     title: "Innovation Focus",
     description:
-      "Cutting-edge solutions using the latest technologies and industry best practices.",
+      "Cutting-edge solutions using AI, cloud computing, and industry best practices.",
   },
   {
     icon: Shield,
-    title: "Security First",
+    title: "Security & Scalability",
     description:
-      "Robust security measures and compliance with industry standards and regulations.",
+      "Enterprise-grade security and scalable architecture built to grow with your business.",
   },
 ];
 
 export default function ServicesPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="flex flex-col pt-20 pb-8">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex flex-col items-center text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col items-center"
-            >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 leading-tight">
-                Our <span className="text-primary">Services</span>
-              </h1>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed mb-6">
-                Comprehensive technical solutions to transform your business
-                with cutting-edge technology and innovative approaches tailored
-                to your specific needs.
-              </p>
-            </motion.div>
-
-            <Link href={"/contact"}>
-              <Button size="lg" className="rounded-full text-lg">
-                Contact Us
-                <PhoneCallIcon />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <TechnicalSection />
 
       {/* Why Choose Us Section */}
-      <section className="flex flex-col py-12">
+      <section className="flex flex-col py-12 w-full">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col items-center text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-              Why Choose Numerlett
+              Why Choose Our Technical Services
             </h2>
             <p className="text-base text-muted-foreground max-w-xl">
               We combine technical expertise with business understanding to
@@ -134,7 +104,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="flex flex-col py-12 bg-muted/30">
+      <section className="flex flex-col py-12 bg-muted/30 w-full">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col items-center text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
@@ -172,7 +142,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="flex flex-col py-12 bg-primary text-primary-foreground">
+      <section className="flex flex-col py-12 bg-primary text-primary-foreground w-full">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

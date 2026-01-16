@@ -4,18 +4,17 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import ThemeProvider from "@/providers/ThemeProvider";
-import { DataProvider } from "@/providers/DataProvider";
 import NextAuthSessionProviders from "@/providers/NextAuthSessionProviders";
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Numerlett`,
+    title: `Numerlett - Technical & Marketing Solutions`,
     description:
-      "SEED is the comprehensive retail management system that streamlines operations, boosts efficiency, and drives growth for modern businesses.",
+      "Numerlett delivers comprehensive technical and marketing solutions including software development, AI automations, digital marketing, and innovative products to help businesses thrive.",
     openGraph: {
-      title: `Numerlett`,
+      title: `Numerlett - Technical & Marketing Solutions`,
       description:
-        "SEED is the comprehensive retail management system that streamlines operations, boosts efficiency, and drives growth for modern businesses.",
+        "Comprehensive technical and marketing solutions including software development, AI automations, digital marketing, and innovative products for modern businesses.",
       url: "https://www.numerlett.com",
       siteName: `Numerlett`,
       images: [
@@ -25,7 +24,7 @@ export function generateMetadata(): Metadata {
           height: 358,
         },
       ],
-      locale: "en_IN",
+      locale: "en_US",
       type: "website",
     },
   };
@@ -44,12 +43,10 @@ export default function RootLayout({
     >
       <body className={cn("h-full w-full flex flex-col overflow-hidden")}>
         <ThemeProvider>
-        <NextAuthSessionProviders>
-          <DataProvider>
+          <NextAuthSessionProviders>
             {children}
             <Toaster richColors />
-          </DataProvider>
-        </NextAuthSessionProviders>
+          </NextAuthSessionProviders>
         </ThemeProvider>
       </body>
     </html>

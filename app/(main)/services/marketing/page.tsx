@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Zap, Code, Brain, PhoneCallIcon } from "lucide-react";
+import { Target, TrendingUp, Users, Award, PhoneCallIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import CreativeSection from "@/components/services/CreativeSection";
@@ -9,102 +9,72 @@ import CreativeSection from "@/components/services/CreativeSection";
 const processSteps = [
   {
     step: "01",
-    title: "Discovery & Planning",
+    title: "Strategy & Research",
     description:
-      "We analyze your requirements, understand your business goals, and create a detailed project roadmap.",
+      "We analyze your market, competitors, and audience to create a data-driven marketing strategy.",
   },
   {
     step: "02",
-    title: "Design & Architecture",
+    title: "Content Creation",
     description:
-      "Our team designs the technical architecture and creates user-focused mockups and prototypes.",
+      "Our creative team develops engaging content tailored to your brand voice and audience.",
   },
   {
     step: "03",
-    title: "Development & Testing",
+    title: "Campaign Launch",
     description:
-      "We build your solution using best practices, conduct thorough testing, and ensure quality delivery.",
+      "We execute multi-channel campaigns with precision timing and optimized targeting.",
   },
   {
     step: "04",
-    title: "Deployment & Support",
+    title: "Analytics & Optimization",
     description:
-      "We deploy your solution and provide ongoing support, maintenance, and updates as needed.",
+      "Continuous monitoring and data-driven optimization to maximize ROI and performance.",
   },
 ];
 
 const whyChooseUs = [
   {
-    icon: Code,
-    title: "Expert Development Team",
+    icon: Target,
+    title: "Data-Driven Strategy",
     description:
-      "Skilled developers with expertise across modern technologies and frameworks.",
+      "Marketing strategies backed by analytics, research, and proven methodologies.",
   },
   {
-    icon: Zap,
-    title: "Agile Methodology",
+    icon: TrendingUp,
+    title: "Results-Focused",
     description:
-      "Fast, iterative development with regular updates and client feedback integration.",
+      "Campaigns designed to deliver measurable results and maximize your return on investment.",
   },
   {
-    icon: Brain,
-    title: "Innovation Focus",
+    icon: Users,
+    title: "Audience Expertise",
     description:
-      "Cutting-edge solutions using the latest technologies and industry best practices.",
+      "Deep understanding of audience behavior, preferences, and engagement patterns.",
   },
   {
-    icon: Shield,
-    title: "Security First",
+    icon: Award,
+    title: "Creative Excellence",
     description:
-      "Robust security measures and compliance with industry standards and regulations.",
+      "Award-worthy creative content that captures attention and drives meaningful engagement.",
   },
 ];
 
 export default function ServicesPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="flex flex-col pt-20 pb-8">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex flex-col items-center text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col items-center"
-            >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 leading-tight">
-                Our <span className="text-primary">Services</span>
-              </h1>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed mb-6">
-                Comprehensive technical solutions to transform your business
-                with cutting-edge technology and innovative approaches tailored
-                to your specific needs.
-              </p>
-            </motion.div>
-
-            <Link href={"/contact"}>
-              <Button size="lg" className="rounded-full text-lg">
-                Contact Us
-                <PhoneCallIcon />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <CreativeSection />
 
       {/* Why Choose Us Section */}
-      <section className="flex flex-col py-12">
+      <section className="flex flex-col py-12 w-full">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col items-center text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-              Why Choose Numerlett
+              Why Choose Our Marketing Services
             </h2>
             <p className="text-base text-muted-foreground max-w-xl">
-              We combine technical expertise with business understanding to
-              deliver exceptional results
+              We combine creative excellence with data-driven strategies to
+              deliver measurable results
             </p>
           </div>
 
@@ -134,15 +104,15 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="flex flex-col py-12 bg-muted/30">
+      <section className="flex flex-col py-12 bg-muted/30 w-full">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex flex-col items-center text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-              Our Development Process
+              Our Marketing Process
             </h2>
             <p className="text-base text-muted-foreground max-w-xl">
-              A proven methodology that ensures successful project delivery from
-              concept to deployment
+              A strategic approach that drives engagement, builds brand
+              awareness, and delivers measurable results
             </p>
           </div>
 
@@ -172,7 +142,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="flex flex-col py-12 bg-primary text-primary-foreground">
+      <section className="flex flex-col py-12 bg-primary text-primary-foreground w-full">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -182,11 +152,11 @@ export default function ServicesPage() {
             className="flex flex-col items-center text-center"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-              Ready to Start Your Project?
+              Ready to Grow Your Brand?
             </h2>
             <p className="text-base sm:text-xl mb-6 sm:mb-8 opacity-90">
-              Let's discuss how our technical expertise can help transform your
-              business and achieve your digital goals.
+              Let's discuss how our marketing expertise can elevate your brand
+              and drive meaningful growth across all channels.
             </p>
             <Link href={"/contact"}>
               <Button size="lg" variant={"secondary"}>

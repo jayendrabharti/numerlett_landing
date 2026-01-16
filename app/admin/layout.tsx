@@ -4,6 +4,7 @@ import AdminSideBar from "@/components/admin/AdminSideBar";
 import Unauthenticated from "@/components/auth/Unauthenticated";
 import Main from "@/components/Main";
 import { Button } from "@/components/ui/button";
+import { DataProvider } from "@/providers/DataProvider";
 import { authOptions } from "@/utils/authOptions";
 import { BanIcon, HomeIcon } from "lucide-react";
 import { getServerSession } from "next-auth";
@@ -18,24 +19,26 @@ export default async function Layout({
   const user = session?.user as User | undefined;
 
   return (
-    <Main className="bg-background text-foreground grid h-dvh min-h-dvh w-full grid-rows-[auto_1fr]">
-      <div className="flex min-h-screen flex-row">
-        <AdminSideBar className="hidden md:block" />
-        <div className="flex flex-1 flex-col">
-          <AdminHeader />
-          <div className="flex w-full flex-1 flex-col gap-3 overflow-y-scroll p-3 pb-20 md:pb-3">
-            {!user ? (
-              <Unauthenticated />
-            ) : user.isAdmin ? (
-              children
-            ) : (
-              <NotAdminWarning />
-            )}
+    <DataProvider>
+      <Main className="bg-background text-foreground grid h-dvh min-h-dvh w-full grid-rows-[auto_1fr]">
+        <div className="flex min-h-screen flex-row">
+          <AdminSideBar className="hidden md:block" />
+          <div className="flex flex-1 flex-col">
+            <AdminHeader />
+            <div className="flex w-full flex-1 flex-col gap-3 overflow-y-scroll p-3 pb-20 md:pb-3">
+              {!user ? (
+                <Unauthenticated />
+              ) : user.isAdmin ? (
+                children
+              ) : (
+                <NotAdminWarning />
+              )}
+            </div>
+            <AdminBottomBar className="block md:hidden" />
           </div>
-          <AdminBottomBar className="block md:hidden" />
         </div>
-      </div>
-    </Main>
+      </Main>
+    </DataProvider>
   );
 }
 

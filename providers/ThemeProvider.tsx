@@ -5,10 +5,8 @@ import { Fragment, useEffect, useState } from "react";
 
 export default function ThemeProvider({
   children,
-  defaultTheme = "dark",
 }: Readonly<{
   children: React.ReactNode;
-  defaultTheme?: "light" | "dark";
 }>) {
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -20,7 +18,9 @@ export default function ThemeProvider({
     <NextThemeProvider
       attribute="class"
       storageKey="theme"
-      defaultTheme={defaultTheme}
+      defaultTheme="dark"
+      forcedTheme="dark"
+      enableSystem={false}
     >
       <Fragment key={mounted ? "mounted" : "unmounted"}>{children}</Fragment>
     </NextThemeProvider>

@@ -1,18 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, CheckCircle, MessageSquare } from "lucide-react";
+import { ArrowRight, CheckCircle, PhoneCallIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import ScrollToSection from "../ScrollToSection";
 
 const benefits = [
-  "Free consultation with our experts",
-  "Tailored solutions for your business",
-  "Transparent pricing and timelines",
-  "Ongoing support and maintenance",
+  "Get notified when SEED launches",
+  "Help shape the product roadmap",
+  "Early access with special pricing",
+  "Built for Indian retail teams",
 ];
 
-export default function CTASection() {
+export default function SeedCTASection() {
   return (
     <section className="py-20 md:py-28 bg-muted/30 w-full">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
@@ -23,11 +24,12 @@ export default function CTASection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Ready to Transform Your Business?
+            Join the early access waitlist
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how Numerlett can help you achieve your goals.
-            Book a free consultation or get in touch with our team today.
+            We&apos;re building SEED with real retailers. Share how you run your
+            stores, and we&apos;ll keep you updated on progress — plus
+            you&apos;ll get early access when we launch.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -49,24 +51,23 @@ export default function CTASection() {
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            viewport={{ once: true }}
           >
-            <Link href={"/book-appointment"}>
+            <Link href={"/contact"}>
               <Button size="lg" className="rounded-full text-lg px-8">
-                Book a Consultation
-                <Calendar className="ml-2 w-5 h-5" />
+                Join waitlist
+                <PhoneCallIcon className="ml-2" />
               </Button>
             </Link>
-            <Link href={"/contact"}>
+            <Link href={"/"}>
               <Button
                 variant={"outline"}
                 size="lg"
                 className="rounded-full text-lg px-8"
               >
-                Contact Us
-                <MessageSquare className="ml-2 w-5 h-5" />
+                About Numerlett
+                <ArrowRight className="ml-2" />
               </Button>
             </Link>
           </motion.div>

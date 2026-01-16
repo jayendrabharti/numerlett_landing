@@ -2,13 +2,18 @@
 
 import Logo from "./Logo";
 import { contactInfo } from "@/utils/data";
-import { LinkedinIcon, InstagramIcon, MailIcon, PhoneCallIcon } from "lucide-react";
+import {
+  LinkedinIcon,
+  InstagramIcon,
+  MailIcon,
+  PhoneCallIcon,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const footerLinks = [
-  { name: "Features", href: "/#features" },
-  { name: "Pricing", href: "/#pricing" },
+  { name: "Services", href: "/services" },
+  { name: "Products", href: "/products" },
   { name: "About", href: "/#about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -29,7 +34,8 @@ export default function Footer() {
           <div className="flex-1">
             <Logo className="mb-3" />
             <p className="text-sm text-muted-foreground mb-4 max-w-md">
-              Building SEED — retail operations software for Indian retailers.
+              Technical and marketing solutions that empower businesses to
+              thrive in the digital landscape.
             </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
@@ -39,7 +45,11 @@ export default function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                   aria-label={social.name}
                   target={social.href.startsWith("http") ? "_blank" : undefined}
-                  rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  rel={
+                    social.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                 >
                   <social.icon size={18} />
                 </a>
@@ -67,14 +77,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Numerlett. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground flex items-center gap-2">
-            Made for retail businesses in India
-            <Image
-              src="/indian-flag.svg"
-              alt="Indian Flag"
-              className="size-4"
-              width={16}
-              height={16}
-            />
+            Proudly serving businesses worldwide
           </p>
         </div>
       </div>
