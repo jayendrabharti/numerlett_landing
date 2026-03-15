@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Logo from "@/components/Logo";
-import ThemeSwitch from "@/components/ThemeSwitch";
 import ParallaxBackground from "@/components/services/ParallaxBackground";
 import useIsMobile from "@/hooks/useIsMobile";
 import { ArrowRightIcon } from "lucide-react";
@@ -67,10 +66,8 @@ export default function GoToPage() {
 
   return (
     <main className="flex h-screen flex-col overflow-hidden" ref={containerRef}>
-      <div className="flex flex-row justify-between p-6">
-        <span></span>
+      <div className="flex flex-row justify-center p-6">
         <Logo />
-        <ThemeSwitch />
       </div>
       <div className="flex flex-col flex-1">
         {TABS.map((tab) => (

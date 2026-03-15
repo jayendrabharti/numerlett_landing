@@ -27,13 +27,15 @@ export default function FeatureCard({
       transition={{ duration: 0.5, delay: index * 0.08 }}
       viewport={{ once: true }}
       className={cn("h-full", className)}
+      whileHover={{ y: -5 }}
     >
-      <Card className="h-full border border-border/50 bg-card hover:border-primary/20 transition-colors duration-300 group">
-        <CardContent className="p-6">
-          <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary mb-4 transition-colors group-hover:bg-primary/15">
-            <Icon className="w-6 h-6" />
+      <Card className="relative h-full flex flex-col overflow-hidden border border-border/50 bg-card/50 backdrop-blur-xl shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 group">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <CardContent className="p-6 relative z-10 flex flex-col h-full">
+          <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 text-primary mb-5 border border-primary/10 shadow-sm transition-transform duration-300 group-hover:scale-110">
+            <Icon className="w-5 h-5" />
           </div>
-          <h3 className="text-lg font-semibold mb-2 text-foreground">
+          <h3 className="text-xl font-heading font-semibold mb-3 text-foreground tracking-tight">
             {title}
           </h3>
           <p className="text-muted-foreground text-sm leading-relaxed">

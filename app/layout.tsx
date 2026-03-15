@@ -1,10 +1,23 @@
 import type React from "react";
 import type { Metadata } from "next";
+import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import ThemeProvider from "@/providers/ThemeProvider";
 import NextAuthSessionProviders from "@/providers/NextAuthSessionProviders";
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
 
 export function generateMetadata(): Metadata {
   return {
@@ -41,7 +54,13 @@ export default function RootLayout({
       suppressHydrationWarning
       className="h-full overflow-hidden dark"
     >
-      <body className={cn("h-full w-full flex flex-col overflow-hidden")}>
+      <body
+        className={cn(
+          "h-full w-full flex flex-col overflow-hidden font-sans",
+          syne.variable,
+          dmSans.variable,
+        )}
+      >
         <ThemeProvider>
           <NextAuthSessionProviders>
             {children}

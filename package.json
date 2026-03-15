@@ -10,6 +10,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fontsource/dm-sans": "^5.2.8",
+    "@fontsource/syne": "^5.2.7",
     "@prisma/client": "^6.19.0",
     "@prisma/extension-accelerate": "^2.0.2",
     "@radix-ui/react-avatar": "^1.1.11",

@@ -35,18 +35,19 @@ export default function NavBar() {
   return (
     <nav
       className={cn(
-        `w-full space-x-2`,
+        `w-full`,
         `sticky top-0 left-0 z-50`,
         `flex flex-row items-center py-4`,
-        `transition-all duration-200`,
-        "backdrop-blur"
+        `transition-all duration-300`,
+        "backdrop-blur-xl bg-transparent",
+        expanded && "max-md:bg-background/80",
       )}
     >
       <div
         className={cn(
           "flex items-center justify-between",
           "mx-auto px-5 md:px-10",
-          "w-full space-x-3"
+          "w-full space-x-3",
         )}
       >
         <AnimatedLogo />
@@ -62,11 +63,12 @@ export default function NavBar() {
             "px-5 py-4 md:p-0",
             "absolute md:static",
             "transition-all duration-200",
-            "shadow-md md:shadow-none",
+            "shadow-lg md:shadow-none",
             expanded
               ? "translate-y-0 scale-y-100"
               : "-translate-y-1/2 scale-y-0 md:translate-y-0 md:scale-y-100",
-            `border-border border-b-2 md:border-0`
+            `border-border border-b md:border-0`,
+            expanded && "max-md:bg-background/95",
           )}
         >
           {NavBarLinks.map((link, index) => {
@@ -80,14 +82,14 @@ export default function NavBar() {
                 scroll={true}
                 onClick={() => setExpanded(false)}
                 className={cn(
-                  "flex flex-row items-center",
-                  "rounded-full px-5 py-2 font-bold md:px-2.5 md:py-1",
-                  active && "bg-primary text-background",
+                  "flex flex-row items-center font-heading text-sm uppercase tracking-wider",
+                  "rounded-full px-5 py-2 font-semibold md:px-4 md:py-1.5",
+                  active && "bg-primary/10 text-primary",
                   !active &&
-                    "hover:bg-secondary text-muted-foreground hover:text-primary",
-                  "ring-muted-foreground active:ring-4",
+                    "hover:bg-secondary/80 text-muted-foreground hover:text-foreground",
+                  "ring-primary/50 active:ring-2",
                   "transition-all duration-300",
-                  "w-full md:w-max"
+                  "w-full md:w-max",
                 )}
               >
                 <link.icon className="mr-1.5 size-4" />
@@ -116,14 +118,14 @@ export default function NavBar() {
           <X
             className={cn(
               "absolute transition-all duration-200",
-              expanded ? "scale-200 rotate-180" : "scale-0 rotate-0"
+              expanded ? "scale-200 rotate-180" : "scale-0 rotate-0",
             )}
           />
 
           <Menu
             className={cn(
               "absolute transition-all duration-200",
-              expanded ? "scale-0 rotate-180" : "scale-200 rotate-0"
+              expanded ? "scale-0 rotate-180" : "scale-200 rotate-0",
             )}
           />
         </Button>

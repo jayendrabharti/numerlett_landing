@@ -18,6 +18,7 @@ export default function GoogleButton({
     <Button
       variant={"outline"}
       type={"button"}
+      size={"sm"}
       className={className}
       onClick={handleGoogleLogin}
     >
