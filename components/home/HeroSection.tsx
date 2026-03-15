@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import RevealHero from "../animations/RevealHero";
 import Link from "next/link";
@@ -27,7 +27,7 @@ export default function HeroSection() {
         Transforming Ideas into Digital Reality
       </motion.div>
 
-      <RevealHero className="text-4xl md:text-5xl lg:text-7xl font-heading font-black tracking-tight text-foreground mb-6 leading-[1.1] mx-auto max-w-4xl">
+      <RevealHero className="text-4xl md:text-5xl lg:text-7xl font-hero font-black tracking-tight text-foreground mb-6 leading-[1.1] mx-auto max-w-4xl">
         <span className="dark:text-primary block">Build, Grow & Scale</span>
         <span className="dark:text-primary block">Your Digital Presence</span>
       </RevealHero>
@@ -52,20 +52,35 @@ export default function HeroSection() {
         <Link href={"/book-appointment"}>
           <Button
             size="lg"
-            className="rounded-full text-lg px-8 h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_40px_-10px_var(--primary)] transition-all"
+            className="group relative rounded-full text-lg px-8 h-14 bg-primary text-primary-foreground hover:bg-primary hover:-translate-y-0.5 hover:shadow-[0_0_50px_-12px_var(--primary)] overflow-hidden transition-all duration-300 font-semibold"
           >
-            Book a Consultation
-            <Calendar className="ml-2 w-5 h-5" />
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
+            <span className="relative z-10 flex items-center">
+              Book a Consultation
+              <Calendar className="ml-2 w-5 h-5 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:scale-110 transition-all duration-300" />
+            </span>
+          </Button>
+        </Link>
+        <Link href={"/contact"}>
+          <Button
+            variant={"secondary"}
+            size="lg"
+            className="group relative rounded-full text-lg px-8 h-14 border border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:border-primary/20 overflow-hidden transition-all duration-300 font-semibold shadow-sm hover:shadow-md"
+          >
+            <span className="relative z-10 flex items-center">
+              Contact Us
+              <Phone className="ml-2 w-5 h-5 group-hover:-rotate-12 transition-transform duration-300" />
+            </span>
           </Button>
         </Link>
         <Link href={"/services"}>
           <Button
-            variant={"outline"}
+            variant={"ghost"}
             size="lg"
-            className="rounded-full text-lg px-8 h-14 border-border bg-background/50 backdrop-blur-md hover:bg-secondary"
+            className="group rounded-full text-lg px-8 h-14 text-muted-foreground hover:text-foreground hover:bg-secondary/20 transition-all duration-300 font-semibold"
           >
             Explore Services
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
           </Button>
         </Link>
       </motion.div>

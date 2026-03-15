@@ -1,6 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Syne, DM_Sans } from "next/font/google";
+import { Syne, DM_Sans, Montserrat } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
@@ -16,6 +16,12 @@ const syne = Syne({
 const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -59,6 +65,7 @@ export default function RootLayout({
           "h-full w-full flex flex-col overflow-hidden font-sans",
           syne.variable,
           dmSans.variable,
+          montserrat.variable,
         )}
       >
         <ThemeProvider>
