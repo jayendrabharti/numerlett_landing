@@ -13,6 +13,7 @@ interface ProductCardProps {
   description: string;
   href: string;
   status?: "available" | "coming-soon" | "beta";
+  image?: string;
   index?: number;
   className?: string;
 }
@@ -23,6 +24,7 @@ export default function ProductCard({
   description,
   href,
   status = "available",
+  image,
   index = 0,
   className,
 }: ProductCardProps) {
@@ -37,7 +39,7 @@ export default function ProductCard({
       viewport={{ once: true }}
       className={cn("h-full", className)}
     >
-      <Card className="h-full border border-border/50 bg-card hover:border-primary/20 transition-all duration-300 group relative overflow-hidden">
+      <Card className="h-full flex flex-col overflow-hidden p-0 gap-0 border border-border/50 bg-card hover:border-primary/20 transition-all duration-300 group relative">
         {status !== "available" && (
           <div className="absolute top-4 right-4 z-10">
             <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary/20 text-primary border border-primary/30">
@@ -46,7 +48,17 @@ export default function ProductCard({
           </div>
         )}
 
-        <CardHeader>
+        {image && (
+          <div className="w-full aspect-[4/3] overflow-hidden relative border-b border-border/50">
+            <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent z-10 opacity-70"></div>
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+        )}
+        <CardHeader className="pt-6">
           <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary mb-4 transition-colors group-hover:bg-primary/15 group-hover:scale-105 duration-300">
             <Icon className="w-8 h-8" />
           </div>

@@ -14,6 +14,7 @@ export default function ProductsPage() {
     {
       title: "SEED",
       tagline: "Retail software that feels calm, not chaotic",
+      image: "/images/retail-manegementp-system-seed.jpeg",
       description:
         "A comprehensive retail management system built for modern retail teams. SEED helps you manage inventory, billing, and reporting in one place with real-time sync across all your locations.",
       href: "/products/seed",

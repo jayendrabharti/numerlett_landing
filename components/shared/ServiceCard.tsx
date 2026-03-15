@@ -12,6 +12,7 @@ interface ServiceCardProps {
   description: string;
   features: string[];
   technologies?: string[];
+  image?: string;
   index?: number;
   className?: string;
 }
@@ -22,6 +23,7 @@ export default function ServiceCard({
   description,
   features,
   technologies,
+  image,
   index = 0,
   className,
 }: ServiceCardProps) {
@@ -33,8 +35,18 @@ export default function ServiceCard({
       viewport={{ once: true }}
       className={cn("h-full", className)}
     >
-      <Card className="h-full border border-border/50 bg-card hover:border-primary/20 transition-all duration-300 group">
-        <CardHeader>
+      <Card className="h-full flex flex-col overflow-hidden p-0 gap-0 border border-border/50 bg-card hover:border-primary/20 transition-all duration-300 group">
+        {image && (
+          <div className="w-full aspect-[4/3] overflow-hidden relative border-b border-border/50">
+            <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent z-10 opacity-70"></div>
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+        )}
+        <CardHeader className="pt-6">
           <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 text-primary mb-4 transition-colors group-hover:bg-primary/15">
             <Icon className="w-7 h-7" />
           </div>

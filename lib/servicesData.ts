@@ -22,6 +22,7 @@ export const technicalServices = [
   {
     icon: DatabaseIcon,
     title: "ERP Solution",
+    image: "/images/erp-solutions.jpeg",
     description:
       "Comprehensive Enterprise Resource Planning systems to streamline your business operations, integrate departments, and improve efficiency across your organization.",
     features: [
@@ -36,6 +37,7 @@ export const technicalServices = [
   {
     icon: CloudIcon,
     title: "SaaS Development",
+    image: "/images/saas-development-solutions.jpeg",
     description:
       "Build scalable Software-as-a-Service applications with modern cloud architecture, multi-tenancy, and subscription management capabilities.",
     features: [
@@ -50,6 +52,7 @@ export const technicalServices = [
   {
     icon: GlobeIcon,
     title: "Website Development",
+    image: "/images/web-developement.jpeg",
     description:
       "Professional websites and web applications built with modern technologies, responsive design, and optimized performance for your business needs.",
     features: [
@@ -64,6 +67,7 @@ export const technicalServices = [
   {
     icon: BotIcon,
     title: "AI Automations & Solutions",
+    image: "/images/ai-automations-and-solutions.jpeg",
     description:
       "Intelligent automation solutions powered by artificial intelligence to optimize workflows, reduce manual tasks, and enhance decision-making processes.",
     features: [
@@ -78,6 +82,7 @@ export const technicalServices = [
   {
     icon: PaletteIcon,
     title: "UI/UX Design",
+    image: "https://placehold.co/600x400/222222/bbbbbb?text=UI+UX+Design",
     description:
       "User-centered design solutions that create intuitive, engaging, and accessible digital experiences for your customers and users.",
     features: [
@@ -92,6 +97,8 @@ export const technicalServices = [
   {
     icon: ShieldIcon,
     title: "Blockchain Development",
+    image:
+      "https://placehold.co/600x400/222222/bbbbbb?text=Blockchain+Development",
     description:
       "Secure and transparent blockchain solutions including smart contracts, DApps, and cryptocurrency integration for modern digital businesses.",
     features: [
@@ -106,6 +113,7 @@ export const technicalServices = [
   {
     icon: SmartphoneIcon,
     title: "App Development",
+    image: "https://placehold.co/600x400/222222/bbbbbb?text=App+Development",
     description:
       "Native and cross-platform mobile applications for iOS and Android with seamless user experiences and robust functionality.",
     features: [
@@ -120,6 +128,8 @@ export const technicalServices = [
   {
     icon: SettingsIcon,
     title: "DevOps & Security",
+    image:
+      "https://placehold.co/600x400/222222/bbbbbb?text=DevOps+and+Security",
     description:
       "Robust DevOps practices and comprehensive security solutions to ensure reliable, secure, and efficient software delivery and operations.",
     features: [
@@ -140,6 +150,8 @@ export const technicalServices = [
   {
     icon: CloudIcon,
     title: "Cloud Infrastructure",
+    image:
+      "https://placehold.co/600x400/222222/bbbbbb?text=Cloud+Infrastructure",
     description:
       "Enterprise-grade cloud infrastructure solutions with scalability, reliability, and cost optimization for your business applications.",
     features: [
@@ -160,6 +172,8 @@ export const technicalServices = [
   {
     icon: ShoppingCartIcon,
     title: "E-Commerce Solutions",
+    image:
+      "https://placehold.co/600x400/222222/bbbbbb?text=E-Commerce+Solutions",
     description:
       "Complete e-commerce solutions with custom online stores, payment integration, inventory management, and conversion optimization.",
     features: [
@@ -183,6 +197,8 @@ export const marketingServices = [
   {
     icon: SearchIcon,
     title: "Digital Marketing & SEO",
+    image:
+      "https://placehold.co/600x400/222222/bbbbbb?text=Digital+Marketing+%26+SEO",
     description:
       "Comprehensive digital marketing strategies including search engine optimization, paid advertising, and performance tracking to boost your online presence and drive qualified traffic.",
     features: [
@@ -203,6 +219,8 @@ export const marketingServices = [
   {
     icon: UsersIcon,
     title: "Social Media Marketing",
+    image:
+      "https://placehold.co/600x400/222222/bbbbbb?text=Social+Media+Marketing",
     description:
       "End-to-end social media management and community building across all major platforms to engage your audience and build brand loyalty.",
     features: [
@@ -223,6 +241,7 @@ export const marketingServices = [
   {
     icon: PaletteIcon,
     title: "Graphic Design & Branding",
+    image: "https://placehold.co/600x400/222222/bbbbbb?text=Graphic+Design",
     description:
       "Professional visual identity and graphic design services that create memorable brand experiences and consistent visual communication across all touchpoints.",
     features: [
@@ -243,6 +262,7 @@ export const marketingServices = [
   {
     icon: VideoIcon,
     title: "Video & Content Creation",
+    image: "https://placehold.co/600x400/222222/bbbbbb?text=Video+and+Content",
     description:
       "Engaging video content and multimedia production including explainer videos, social media content, and promotional materials to captivate your audience.",
     features: [
@@ -263,6 +283,7 @@ export const marketingServices = [
   {
     icon: MailIcon,
     title: "Email Marketing",
+    image: "https://placehold.co/600x400/222222/bbbbbb?text=Email+Marketing",
     description:
       "Strategic email marketing campaigns with automated workflows, personalization, and data-driven insights to nurture leads and drive conversions.",
     features: [
@@ -283,6 +304,8 @@ export const marketingServices = [
   {
     icon: MegaphoneIcon,
     title: "Influencer Marketing",
+    image:
+      "https://placehold.co/600x400/222222/bbbbbb?text=Influencer+Marketing",
     description:
       "Strategic influencer partnerships and campaign management to amplify your brand message and reach your target audience authentically.",
     features: [
@@ -303,6 +326,7 @@ export const marketingServices = [
   {
     icon: MousePointerClickIcon,
     title: "Content Marketing",
+    image: "https://placehold.co/600x400/222222/bbbbbb?text=Content+Marketing",
     description:
       "Strategic content creation and distribution to attract, engage, and convert your target audience through valuable and relevant content.",
     features: [
@@ -323,6 +347,8 @@ export const marketingServices = [
   {
     icon: BarChart3Icon,
     title: "Analytics & Reporting",
+    image:
+      "https://placehold.co/600x400/222222/bbbbbb?text=Analytics+and+Reporting",
     description:
       "Comprehensive data analysis and reporting services to track performance, measure ROI, and make data-driven marketing decisions.",
     features: [
