@@ -52,7 +52,7 @@ export default function AdminBottomBar({
     <nav
       className={cn(
         "bg-background border-border z-50 border-t shadow-lg backdrop-blur-lg",
-        className
+        className,
       )}
     >
       <div className="flex items-center justify-around px-4 py-2">
@@ -64,7 +64,7 @@ export default function AdminBottomBar({
               href={navLink.href}
               className={cn(
                 "flex flex-col items-center justify-center rounded-lg px-3 py-2 transition-colors duration-200",
-                "transition-all duration-150 active:scale-90"
+                "transition-all duration-150 active:scale-90",
               )}
               prefetch={true}
             >
@@ -73,14 +73,14 @@ export default function AdminBottomBar({
                   "mb-1 size-8 rounded p-1",
                   active
                     ? "text-background bg-primary"
-                    : "text-muted-foreground"
+                    : "text-muted-foreground",
                 )}
               />
 
               <span
                 className={cn(
                   "max-w-full truncate text-center text-xs leading-tight",
-                  active ? "text-primary font-bold" : "text-muted-foreground"
+                  active ? "text-primary font-bold" : "text-muted-foreground",
                 )}
               >
                 {navLink.title}

@@ -88,7 +88,7 @@ export default function FeaturesSection() {
         description="Comprehensive technical and marketing solutions designed to drive your business forward with innovation and expertise."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
         {featuredServices.map((service, index) => (
           <FeatureCard key={service.title} {...service} index={index} />
         ))}

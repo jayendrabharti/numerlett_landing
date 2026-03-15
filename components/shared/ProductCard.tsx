@@ -49,8 +49,8 @@ export default function ProductCard({
         )}
 
         {image && (
-          <div className="w-full aspect-[4/3] overflow-hidden relative border-b border-border/50">
-            <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent z-10 opacity-70"></div>
+          <div className="w-full aspect-4/3 overflow-hidden relative border-b border-border/50">
+            <div className="absolute inset-0 bg-linear-to-t from-card to-transparent z-10 opacity-70"></div>
             <img
               src={image}
               alt={title}
@@ -68,7 +68,7 @@ export default function ProductCard({
           <p className="text-sm font-medium text-primary">{tagline}</p>
         </CardHeader>
 
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-6 pb-6">
           <p className="text-muted-foreground leading-relaxed">{description}</p>
 
           <Link href={href} className="block">

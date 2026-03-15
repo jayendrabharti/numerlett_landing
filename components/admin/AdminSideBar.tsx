@@ -56,7 +56,7 @@ export default function AdminSideBar({
       className={cn(
         `group navbar bg-background border-border z-10 row-start-2 row-end-3 flex max-h-screen w-19 flex-col overflow-hidden border-r p-2.5 shadow-md backdrop-blur-lg transition-all duration-300 ease-in-out hover:w-60`,
         expanded ? "w-60" : "",
-        className
+        className,
       )}
     >
       {/* Main navigation items */}
@@ -68,7 +68,7 @@ export default function AdminSideBar({
               key={index}
               href={navLink.href}
               className={cn(
-                "hover:bg-muted relative flex cursor-pointer flex-row items-center rounded-xl"
+                "hover:bg-muted relative flex cursor-pointer flex-row items-center rounded-xl",
               )}
               prefetch={true}
             >
@@ -89,7 +89,7 @@ export default function AdminSideBar({
                     ? "text-foreground top-[90%] font-bold"
                     : "text-muted-foreground top-[80%]",
                   `transition-opacity duration-200 group-hover:pointer-events-none group-hover:opacity-0`,
-                  expanded ? "pointer-events-none opacity-0" : ""
+                  expanded ? "pointer-events-none opacity-0" : "",
                 )}
               >
                 {navLink.title}
@@ -102,7 +102,7 @@ export default function AdminSideBar({
                   active
                     ? "text-foreground font-bold"
                     : "text-muted-foreground",
-                  expanded ? "pointer-events-auto opacity-100" : ""
+                  expanded ? "pointer-events-auto opacity-100" : "",
                 )}
               >
                 {navLink.title}

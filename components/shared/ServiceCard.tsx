@@ -37,8 +37,8 @@ export default function ServiceCard({
     >
       <Card className="h-full flex flex-col overflow-hidden p-0 gap-0 border border-border/50 bg-card hover:border-primary/20 transition-all duration-300 group">
         {image && (
-          <div className="w-full aspect-[4/3] overflow-hidden relative border-b border-border/50">
-            <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent z-10 opacity-70"></div>
+          <div className="w-full aspect-4/3 overflow-hidden relative border-b border-border/50">
+            <div className="absolute inset-0 bg-linear-to-t from-card to-transparent z-10 opacity-70"></div>
             <img
               src={image}
               alt={title}
@@ -54,7 +54,7 @@ export default function ServiceCard({
             {title}
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-6 pb-6">
           <p className="text-muted-foreground text-sm leading-relaxed">
             {description}
           </p>
@@ -69,7 +69,7 @@ export default function ServiceCard({
                   key={idx}
                   className="flex items-start gap-2 text-sm text-muted-foreground"
                 >
-                  <CheckIcon className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <CheckIcon className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                   <span>{feature}</span>
                 </li>
               ))}

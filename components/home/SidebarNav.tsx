@@ -10,10 +10,10 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { id: "hero", label: "Home" },
-  { id: "services", label: "Features" },
-  { id: "capabilities", label: "Platforms" },
-  { id: "about", label: "About us" },
-  { id: "cta", label: "Get Started" },
+  { id: "services", label: "Our Services" },
+  { id: "capabilities", label: "Built for Modern Businesses" },
+  { id: "about", label: "About Numerlett" },
+  { id: "cta", label: "Ready to Transform" },
 ];
 
 export default function SidebarNav() {

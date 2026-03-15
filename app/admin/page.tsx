@@ -95,10 +95,10 @@ export default async function AdminPage() {
                         form.status === "PENDING"
                           ? "bg-yellow-500/10 text-yellow-700 dark:text-yellow-400"
                           : form.status === "IN_PROGRESS"
-                          ? "bg-blue-500/10 text-blue-700 dark:text-blue-400"
-                          : form.status === "RESOLVED"
-                          ? "bg-green-500/10 text-green-700 dark:text-green-400"
-                          : "bg-gray-500/10 text-gray-700 dark:text-gray-400"
+                            ? "bg-blue-500/10 text-blue-700 dark:text-blue-400"
+                            : form.status === "RESOLVED"
+                              ? "bg-green-500/10 text-green-700 dark:text-green-400"
+                              : "bg-gray-500/10 text-gray-700 dark:text-gray-400"
                       }`}
                     >
                       {form.status.replace("_", " ")}

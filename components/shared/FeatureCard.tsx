@@ -32,8 +32,8 @@ export default function FeatureCard({
     >
       <Card className="h-full relative overflow-hidden group border-border/50 bg-card hover:bg-accent/50 transition-all duration-500 hover:shadow-lg p-0 gap-0">
         {image && (
-          <div className="w-full aspect-[4/3] overflow-hidden relative border-b border-border/50">
-            <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent z-10 opacity-70"></div>
+          <div className="w-full aspect-4/3 overflow-hidden relative border-b border-border/50">
+            <div className="absolute inset-0 bg-linear-to-t from-card to-transparent z-10 opacity-70"></div>
             <img
               src={image}
               alt={title}
@@ -43,11 +43,11 @@ export default function FeatureCard({
         )}
         <CardContent
           className={cn(
-            "relative z-10 flex flex-col h-full",
+            "relative z-10 flex flex-col",
             image ? "p-6 pt-6" : "p-6",
           )}
         >
-          <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 text-primary mb-5 border border-primary/10 shadow-sm transition-transform duration-300 group-hover:scale-110">
+          <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-linear-to-br from-primary/20 to-primary/5 text-primary mb-5 border border-primary/10 shadow-sm transition-transform duration-300 group-hover:scale-110">
             <Icon className="w-5 h-5" />
           </div>
           <h3 className="text-xl font-heading font-semibold mb-3 text-foreground tracking-tight">

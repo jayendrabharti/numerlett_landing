@@ -14,6 +14,7 @@ export default function Logo({ className = "" }: { className?: string }) {
       >
         <Image
           src="/images/numerlett-logo.png"
+          // src="/images/numerlett-logo-small.png"
           alt="Numerlett"
           width={200}
           height={200}
