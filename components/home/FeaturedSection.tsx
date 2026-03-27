@@ -8,10 +8,11 @@ import {
   CloudIcon,
   GlobeIcon,
   SearchIcon,
-  UsersIcon,
   PaletteIcon,
   DatabaseIcon,
   VideoIcon,
+  ShoppingCartIcon,
+  SmartphoneIcon,
 } from "lucide-react";
 import {
   FeatureCard,
@@ -50,34 +51,32 @@ export default function FeaturesSection() {
         "Comprehensive Enterprise Resource Planning systems to streamline operations and integrate departments efficiently.",
     },
     {
-      icon: SearchIcon,
-      image:
-        "https://placehold.co/600x400/1e1e1e/888888?text=Digital+Marketing+%26+SEO",
-      title: "Digital Marketing & SEO",
-      description:
-        "Comprehensive digital marketing strategies including SEO, paid advertising, and performance tracking to boost your online presence.",
-    },
-    {
-      icon: UsersIcon,
-      image:
-        "https://placehold.co/600x400/1e1e1e/888888?text=Social+Media+Marketing",
-      title: "Social Media Marketing",
-      description:
-        "End-to-end social media management and community building across all major platforms to engage your audience.",
-    },
-    {
       icon: PaletteIcon,
-      image: "https://placehold.co/600x400/1e1e1e/888888?text=Graphic+Design",
-      title: "Graphic Design & Branding",
+      image: "/images/ui-ux-design.jpeg",
+      title: "UI/UX Design",
       description:
-        "Professional visual identity and graphic design services that create memorable brand experiences and consistent communication.",
+        "User-centered design solutions that create intuitive, engaging, and accessible digital experiences for your customers.",
     },
     {
-      icon: VideoIcon,
-      image: "https://placehold.co/600x400/1e1e1e/888888?text=Video+Creation",
-      title: "Video & Content Creation",
+      icon: ShoppingCartIcon,
+      image: "/images/ecommerce-solutions.jpeg",
+      title: "E-Commerce Solutions",
       description:
-        "Engaging video content and multimedia production including explainer videos, social media content, and promotional materials.",
+        "Complete e-commerce solutions with custom online stores, payment integration, and inventory management.",
+    },
+    {
+      icon: SmartphoneIcon,
+      image: "/images/app-development.jpeg",
+      title: "App Development",
+      description:
+        "Native and cross-platform mobile applications for iOS and Android with seamless user experiences.",
+    },
+    {
+      icon: CloudIcon,
+      image: "/images/cloud-infra.jpeg",
+      title: "Cloud Infrastructure",
+      description:
+        "Enterprise-grade cloud infrastructure solutions with scalability, reliability, and cost optimization.",
     },
   ];
 
