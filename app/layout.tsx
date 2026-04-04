@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import ThemeProvider from "@/providers/ThemeProvider";
 import NextAuthSessionProviders from "@/providers/NextAuthSessionProviders";
+import WelcomeLogo from "@/components/WelcomeLogo";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -72,6 +73,7 @@ export default function RootLayout({
           <NextAuthSessionProviders>
             {children}
             <Toaster richColors />
+            <WelcomeLogo />
           </NextAuthSessionProviders>
         </ThemeProvider>
       </body>

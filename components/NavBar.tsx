@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { FaCube, FaHome } from "react-icons/fa";
-import AnimatedLogo from "./AnimatedLogo";
+import AnimatedLogo from "./SmallLogo";
 import UserButton from "./auth/UserButton";
 import GoogleButton from "./auth/GoogleButton";
 
@@ -37,7 +37,7 @@ export default function NavBar() {
       className={cn(
         `w-full`,
         `sticky top-0 left-0 z-50`,
-        `flex flex-row items-center py-4`,
+        `flex flex-row items-center py-3`,
         `transition-all duration-300`,
         "backdrop-blur-xl bg-transparent",
         expanded && "max-md:bg-background/80",
